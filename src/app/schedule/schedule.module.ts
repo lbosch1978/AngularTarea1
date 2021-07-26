@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home/home.component';
-
+import { ControlsModule } from '../controls/controls.module';
 
 
 @NgModule({
@@ -9,7 +9,11 @@ import { HomeComponent } from './home/home.component';
     HomeComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ControlsModule
+  ],
+  exports:[
+    HomeComponent
   ]
 })
 export class ScheduleModule { }

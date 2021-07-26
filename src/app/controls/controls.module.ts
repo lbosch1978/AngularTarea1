@@ -13,7 +13,12 @@ import { BulletComponent } from './bullet/bullet.component';
     BulletComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+  ],
+  exports:[
+    PanelComponent,
+    BulletComponent,
+    ButtonComponent
   ]
 })
 export class ControlsModule { }
