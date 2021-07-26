@@ -1,1 +1,8 @@
-<p>panel works!</p>
+<div class="box" [ngStyle]="{'padding':getPadding()}">
+    <div>
+        <ng-content> </ng-content>
+    </div>
+    <div class="btnEliminar">
+        <app-button> Eliminar </app-button>
+    </div>
+</div>

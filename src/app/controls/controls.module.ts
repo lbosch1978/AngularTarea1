@@ -5,7 +5,6 @@ import { ButtonComponent } from './button/button.component';
 import { BulletComponent } from './bullet/bullet.component';
 
 
-
 @NgModule({
   declarations: [
     PanelComponent,

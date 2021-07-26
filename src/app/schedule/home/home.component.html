@@ -1,1 +1,34 @@
-<app-panel></app-panel>
+<div class="container">
+    <h1>TABLERO DE TAREAS</h1>
+    <div class="break"></div>
+    <div class="section" *ngFor="let column of columns">
+        <h3>{{ column.title }}</h3>
+        <app-panel padding="narrow">
+            <div *ngFor="let task of tasks">
+                <div *ngIf="column.id == task.status">
+                    <app-bullet>
+                        {{ task.displayText }}
+                        <br>
+                        <select [(ngModel)]="statusSeleccionado" (change)="changeTaskStatus()">
+                            <option *ngFor="let column of columns" value="{{ task.id + '_' + column.id }}"> {{ column.title }}  </option>
+                        </select>
+                    </app-bullet>
+                </div>
+            </div>
+        </app-panel>
+    </div>
+</div>
+<div class="container">
+    <div class="actions" *ngFor="let action of actions; let in=index">
+        <div class="box">
+            <div>
+                <h5>{{action.title}}</h5>
+                <label for="Titulo">Titulo: </label>
+                <input type="text" name="{{action.id}}" id="{{action.id}}">
+            </div>
+            <div class="buttons">
+                <app-button (click)="ChangeTask(actions[in].id)"> {{ action.button }}</app-button>
+            </div>
+        </div>
+    </div>
+</div>

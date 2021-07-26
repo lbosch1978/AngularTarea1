@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home/home.component';
 import { ControlsModule } from '../controls/controls.module';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -10,7 +11,8 @@ import { ControlsModule } from '../controls/controls.module';
   ],
   imports: [
     CommonModule,
-    ControlsModule
+    ControlsModule,
+    FormsModule
   ],
   exports:[
     HomeComponent
